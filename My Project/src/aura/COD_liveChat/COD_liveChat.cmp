@@ -1,0 +1,23 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+<!--Initialize the Live Agent-->
+
+
+<aura:handler name="init" value="{!this}" action="{!c.init}" />
+<ltng:require scripts="{!$Resource.LiveChat}" afterScriptsLoaded="{!c.chatSetup}"/>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4 col-md-4 msiBoxCol">
+
+		<img id="liveagent_button_online_5732800000007p1" style="display: none; border: 0px none; cursor: pointer" onclick="{!c.startChat}" src="https://tquilafsltraining-developer-edition.ap2.force.com/resource/1503929546000/DarebinLiveChatOnline" />
+
+		<img id="liveagent_button_offline_5732800000007p1" style="display: none; border: 0px none; " src="https://tquilafsltraining-developer-edition.ap2.force.com/resource/1503929598000/DarebinLiveChatOffline" />
+
+        </div>
+    </div>
+</div>	
+
+
+
+</aura:component>

@@ -1,0 +1,33 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" >
+    <div class="home-container">
+        <div class="slds-grid slds-wrap slds-small-size--6-of-8 slds-medium-size-6-of-8 slds-large-size--10-of-12">
+            <div class="slds-size--1-of-1">
+                <c:tq_CivicNav />
+            </div>
+            <div class="slds-size--1-of-1 home-content">
+                <div class="home-image">
+                    <img src="http://services.benevolent.org.au/images/UserUploadedImages/176/grandmother_granddaughter.jpg" />
+                </div>
+                
+                <div class="page-content-container">
+                	<div class="content-heading-h2">
+                    	<h2>Human potential, realised.</h2>
+                    </div>
+                    <div class="content-heading-p">
+                        <p>
+                        	Supports people with disability to exercise choice and control in their lives,
+                            <br/> 
+                            achieve their goals and participate in the community.
+                        </p>
+                        
+                        <p>
+                            We practice Person Centred Active Support and firmly believe that<br/>
+                            Every Moment has Potential.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+</aura:component>

@@ -1,0 +1,38 @@
+.THIS {
+    margin-left:-10px;
+    display:flex;
+    justify-content:center;
+    margin-top:-20px;
+}
+
+.THIS .home-image img{
+    width:100%;
+}
+
+.THIS .page-content-container{
+    padding: 20px;
+    display: flex;
+    color: #0090bf;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.THIS .content-heading-h2{
+    font-size: 40px;
+    font-weight: bold;
+    padding:20px;
+}
+
+.THIS .content-heading-p{
+    word-spacing: 2px;
+    justify-content: center;
+    display: flex;
+    font-weight: 400;
+    font-size: 21px;
+    flex-wrap: wrap;
+    text-align:center;
+}
+.THIS .content-heading-p p{
+    width:90%;
+    padding:10px;
+}

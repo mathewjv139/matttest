@@ -1,0 +1,30 @@
+<aura:component >
+    
+    <div class="sec-nav-container">
+        <div class="gov-branding-logo slds-size--2-of-6">
+            <img src="http://socialfutures.org.au/wp-content/uploads/2017/06/LiveBetterLogo.jpg" />
+        </div>
+        
+        <div class="slds-size--4-of-6 sec-nav">
+            <div class="sec-nav-item">
+                NDIS
+            </div>
+            <div class="sec-nav-item">
+                Wellbeing
+            </div>
+            <div class="sec-nav-item">
+                Social
+            </div>
+            <div class="sec-nav-item">
+                Home
+            </div>
+            <div class="sec-nav-item">
+                Work
+            </div>
+            <div class="sec-nav-item">
+                Learn
+            </div>
+        </div>
+    </div>
+	
+</aura:component>

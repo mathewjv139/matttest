@@ -1,0 +1,171 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" >
+    
+    <div class="enquiry-container">
+        <div class="slds-grid slds-wrap slds-small-size--6-of-8 slds-medium-size-6-of-8 slds-large-size--10-of-12">
+            <div class="slds-size--1-of-1">
+                <c:tq_TquilaNav />
+            </div>
+            <div class="slds-size--1-of-1 introduction-message">
+                The <b style="color:#1fc3df;">National Disability Insurance Scheme (NDIS)</b> is bringing a major change to the way that people with disability in Australia are funded. The NDIS will give you greater control over your own life with the ability to determine what disability supports you wish to receive – and who will provide them.
+                <br/><br/><h4 class="heading-ndis">You now have control and choice.</h4>
+                <ul>
+                    <li class="li-items"> - You decide what supports you need</li>
+                    <li class="li-items"> - You develop your plan</li>
+                    <li class="li-items"> - You choose your service provider</li>
+                </ul>
+            </div>
+            <div class="slds-size--1-of-1">
+                <div class="slds-grid slds-wrap enquiry-content">
+                    <div class="slds-size--4-of-6">
+                        <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+                            
+                            <input type="hidden" name="oid" value="00D28000001iwPB" />
+                            <input type="hidden" name="retURL" value="https://tquilademondis-developer-edition.ap2.force.com/s/home-ndis" />
+                            <input type="hidden" name="lead_source" value="Web" />
+                            
+                            
+                            <div class="slds-form--stacked">
+                                
+                                
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="company">Client Name / Company</label>
+                                    <div class="slds-form-element__control">
+                                        <input id="company" maxlength="40" name="company" size="20" type="text" class="slds-input" placeholder="Enter Client Name or Company" />
+                                    </div>
+                                </div>
+                                
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="first_name">First Name</label>
+                                    <div class="slds-form-element__control">
+                                        <input type="text" maxlength="40" name="first_name" size="20" id="first_name" class="slds-input" placeholder="Enter First Name" />
+                                    </div>
+                                </div>
+                                
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="first_name">Last Name</label>
+                                    <div class="slds-form-element__control">
+                                        <input id="last_name" maxlength="80" name="last_name" size="20" type="text"  class="slds-input" placeholder="Enter Last Name" />
+                                    </div>
+                                </div>
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="irst_name">Email</label>
+                                    <div class="slds-form-element__control">
+                                        <input id="email" maxlength="80" name="email" size="20" type="text" class="slds-input" placeholder="Enter Email" />
+                                    </div>
+                                </div>
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="city">City</label>
+                                    <div class="slds-form-element__control">
+                                        <input id="city" maxlength="40" name="city" size="20" type="text" class="slds-input" placeholder="Sydney" />
+                                    </div>
+                                </div>
+                                
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="state">State/Province</label>
+                                    <div class="slds-form-element__control">
+                                        <input id="state" maxlength="20" name="state" size="20" type="text" class="slds-input" placeholder="NSW" />
+                                    </div>
+                                </div>
+                                
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label"  for="Client_Age">Client Age</label>
+                                    <div class="slds-form-element__control">
+                                        <input class="slds-input"  id="00N6F00000EaKbP" name="00N6F00000EaKbP" size="20" type="text" />
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label"  for="00N6F00000EaKc3">Service Requested</label>
+                                    <div class="slds-select_container"> 
+                                        <select class="slds-select" id="00N6F00000EaKc3" name="00N6F00000EaKc3" title="Service Requested">
+                                            <option value="">--None--</option><option value="NDIS Planning">NDIS Planning</option>
+                                            <option value="NDIS Information">NDIS Information</option>
+                                            <option value="Support Coordination">Support Coordination</option>
+                                            <option value="Respite">Respite</option>
+                                            <option value="Residential Living">Residential Living</option>
+                                            <option value="Retirement Living">Retirement Living</option>
+                                            <option value="Home Care Services">Home Care Services</option>
+                                            <option value="General Enquiry">General Enquiry</option>
+                                            <option value="TTW">TTW</option>
+                                            <option value="Attendant Care">Attendant Care</option>
+                                            <option value="In Home Support">In Home Support</option>
+                                            <option value="Aged Care respite">Aged Care respite</option>
+                                            <option value="Child Services">Child Services</option>
+                                            <option value="Life Choices">Life Choices</option>
+                                            <option value="Active Ageing">Active Ageing</option>
+                                            <option value="Groups">Groups</option>
+                                            <option value="Transport">Transport</option>
+                                            <option value="Workbook session/ NDIS update.">Workbook session/ NDIS update.</option>
+                                            <option value="Day Program">Day Program</option>
+                                            <option value="Work Experience">Work Experience</option>
+                                            <option value="Supported employment">Supported employment</option>
+                                        </select>
+                                    </div>
+                                    
+                                </div>
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label"  for="00N6F00000EaKdz">Gender</label>
+                                    <div class="slds-select_container">     
+                                        <select  class="slds-select" id="00N6F00000EaKdz" name="00N6F00000EaKdz" title="Gender">
+                                            <option value="">--None--</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Femaile">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label"  for="00N6F00000EaKe4">Living Arrangements</label>
+                                    <div class="slds-select_container">
+                                        <select class="slds-select" id="00N6F00000EaKe4" name="00N6F00000EaKe4" title="Living Arrangements">
+                                            <option value="">--None--</option><option value="Home">Home</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label"  for="Primary_Disability">Primary Disability</label>
+                                    <div class="slds-form-element__control">
+                                        <textarea  class="slds-textarea" id="00N6F00000EaKe9" name="00N6F00000EaKe9" type="text" wrap="soft"></textarea>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label"  for="LGA">LGA</label>
+                                    <div class="slds-form-element__control">
+                                        <input  class="slds-input" id="00N6F00000EaKeE" maxlength="80" name="00N6F00000EaKeE" size="20" type="text" />
+                                    </div>
+                                </div>
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label"  for="00N6F00000EaKeJ">Current Individualised Funding</label>
+                                    <div class="slds-form-element__control">
+                                        <textarea  class="slds-textarea" id="00N6F00000EaKeJ" name="00N6F00000EaKeJ" type="text" wrap="soft"></textarea>
+                                    </div>
+                                </div>
+                                
+                                <div class="slds-form-element">
+                                    <button type="submit" name="submit" class="slds-button slds-button--brand">Submit Enquiry</button>
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div>
+                    <div class="slds-size--2-of-6 side-messages">
+                        <div class="slds-popover slds-popover--tooltip slds-nubbin--bottom-left side-message" role="tooltip" id="help" style="background-color:#1fc3df">
+                            <div class="slds-popover__body">Talk to us about wellbeing care<br/>
+                                Call us today <b>1800 123 123</b>
+                            </div>
+                        </div>
+                        
+                        <div class="slds-popover slds-popover--tooltip slds-nubbin--bottom-left side-message" role="tooltip" id="help" style="background-color:green;">
+                            <div class="slds-popover__body">Our dedicated specialist support team work collaboratively to provide a holistic, person centered service. Using evidence based therapies, we aim to provide effective therapy to all clients to achieve their social, emotional, physical and vocational goals and reach their potential.</div>
+                        </div>
+                        
+                        <div class="slds-popover slds-popover--tooltip slds-nubbin--bottom-left side-message" role="tooltip" id="help" style="background-color:#118752;">
+                            <div class="slds-popover__body">Tquila is a registered service provider under the NDIS and offers a wide range of individualised services to meet your needs and the supports funded in your NDIS Plan.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,122 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" >
+    
+    <div class="enquiry-container">
+        <div class="slds-grid slds-wrap slds-small-size--6-of-8 slds-medium-size-6-of-8 slds-large-size--10-of-12">
+ 		<!--Naav Component here -->
+            <!--<div class="slds-size-1-of-1 introduction-message">
+                The <b style="color:#1fc3df;">National Disability Insurance Scheme (NDIS)</b> is bringing a major change to the way that people with disability in Australia are funded. The NDIS will give you greater control over your own life with the ability to determine what disability supports you wish to receive – and who will provide them.
+                <br/><br/><h4 class="heading-ndis">You now have control and choice.</h4>
+                <ul>
+                    <li class="li-items"> - You decide what supports you need</li>
+                    <li class="li-items"> - You develop your plan</li>
+                    <li class="li-items"> - You choose your service provider</li>
+                </ul>
+            </div>-->
+            <div class="slds-size--1-of-1">
+                <div class="slds-grid slds-wrap enquiry-content">
+                    <div class="slds-size--4-of-6">
+                        <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+                            
+                            <input type="hidden" name="orgid" value="00D28000001iwPB"/>
+                            <input type="hidden" name="retURL" value="https://tquilademondis-developer-edition.ap2.force.com/council/s/thankyou"/>
+                            <!--<input type="hidden" name="case_source" value="Website" />-->
+                            <input type="hidden" name="external" value="1" />
+                            <input type="hidden" name="recordType" id="recordType" value="01228000000ybDK"/>
+                            
+                            <!--<input type="hidden" name="debug" value="1" />
+                            <input type="hidden" name="debugEmail" value="mjvthegr8@gmail.com" />-->
+                            
+                            
+                            <div class="slds-form--stacked">
+                                
+                                
+                                <!--<div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="company">Client Name / Company</label>
+                                    <div class="slds-form-element__control">
+                                        <input id="company" maxlength="40" name="company" size="20" type="text" class="slds-input" placeholder="Enter Client Name or Company" />
+                                    </div>
+                                </div>-->
+                                
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="name">Contact Name</label>
+                                    <div class="slds-form-element__control">
+                                        <input type="text" maxlength="80" name="name" size="20" id="name" class="slds-input" placeholder="Enter Contact Name" />
+                                    </div>
+                                </div>
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="email">Email</label>
+                                    <div class="slds-form-element__control">
+                                        <input id="email" maxlength="80" name="email" size="20" type="text" class="slds-input" placeholder="Enter Email" />
+                                    </div>
+                                </div> 
+
+                                
+                         		<div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="phone">Phone</label>
+                                    <div class="slds-form-element__control">
+                                        <input id="phone" maxlength="40" name="phone" size="20" type="text"  class="slds-input" placeholder="Enter Phone" />
+                                    </div>
+                                </div>
+
+                                 <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="subject">Subject</label>
+                                    <div class="slds-form-element__control">
+                                        <input id="subject" maxlength="80" name="subject" size="20" type="text" class="slds-input" placeholder="Enter Subject" />
+                                    </div>
+                                </div> 
+                                 <div class="slds-form-element">
+                                    <label class="slds-form-element__label"  for="description">Description</label>
+                                    <div class="slds-form-element__control">
+                                        <textarea  class="slds-textarea" name="description" type="text" wrap="soft"></textarea>
+                                    </div>
+                                </div> 
+
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label"  for="type">Type</label>
+                                    <div class="slds-select_container"> 
+                                        <select class="slds-select" id="type" name="type" title="Type">
+                                            <option value="">--None--</option>
+                                            <option value="Missed Bin Pickup">Missed Bin Pickup</option>
+                                            <option value="Lost, Stolen, or Damaged Bin">Lost, Stolen, or Damaged Bin</option>
+                                            <option value="Hard Waste Collection">Hard Waste Collection</option>
+                                            <option value="Dumped Rubbish">Dumped Rubbish</option>
+                                            <option value="Green Bin Request">Green Bin Request</option>
+                                            <option value="Miscellaneous">Miscellaneous</option>
+                                            <option value="Other">Other</option>
+
+                                        </select>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label"  for="priority">Priority</label>
+                                    <div class="slds-select_container"> 
+                                        <select class="slds-select" id="priority" name="priority" title="Priority">
+                                            <option value="">--None--</option>
+                                            <option value="High">High</option>
+                                            <option value="Medium">Medium</option>
+                                            <option value="Low">Low</option>
+
+
+                                        </select>
+                                    </div>
+                                    
+                                </div>                                                                                                                             
+                                
+                                
+
+                                
+                                <div class="slds-form-element">
+                                    <button type="submit" name="submit" class="slds-button slds-button--brand">Submit Enquiry</button>
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

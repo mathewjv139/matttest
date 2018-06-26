@@ -1,0 +1,194 @@
+<aura:component implements="forceCommunity:themeLayout" access="global" description="Sample Custom Theme Layout">
+    
+    <aura:attribute name="search" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="logo" type="Aura.Component[]" required="false" />
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="newHeader" type="Aura.Component[]" required="false"/>
+    
+    <aura:attribute name="selectedNavigationIndex" type="Integer" default="1"/>
+
+    <!--<ltng:require scripts="{!$Resource.LiveChat}" afterScriptsLoaded="{!c.chatSetup}" />-->
+    
+    <aura:handler event="aura:waiting" action="{!c.waiting}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.doneWaiting}"/>
+    
+    <aura:handler action="{!c.doInit}" name="init" value="{!this}" />
+    
+    <div aura:id="LOADING_SPINNER" class="slds-hide">
+        <lightning:spinner variant="brand" size="large" alternativeText="loadingClaimForm"/>
+    </div>
+
+   
+    <div class="slds-grid slds-wrap">
+		<div class="mainContentArea"> 
+            <div class="slds-grid slds-wrap slds-size--1-of-1" >
+                 	<!--Adding initial segment without animation -->
+                	<div class="slds-size--1-of-1 ui-initial-segment">
+                		
+                		<div class="ui-animated-graphic-boat">
+                			<div class="ui-animated-graphic-boat-animation-wrap">
+
+                				<img src="http://www.darebin.vic.gov.au/assets/images/boats.gif"/>
+
+                				
+
+                			</div>
+
+                		</div>
+
+                		
+	               			
+
+
+                	</div>           	
+                <div class="nav-container">
+
+
+                    <div class="slds-small-size--6-of-8 slds-medium-size-6-of-8 slds-large-size--10-of-12">
+                        <div class="slds-grid slds-wrap">
+							
+                		
+
+
+                            <div class="nav-items slds-size--5-of-6">
+
+								<div>
+                		
+                					<div class="ui-main-logo" style="top:0px">
+                						<a href="/">
+                							<span>City Of Darebin</span>
+                						</a>
+                					</div>	
+
+                				</div>
+
+                                <div class="{!'nav-item '+if(v.selectedNavigationIndex==1,' nav-selected','')}" onclick="{!c.navigateToHome}">
+                                    Discover Darebin	
+                                </div>
+                                <div class="{!'nav-item '+ if(v.selectedNavigationIndex==2,' nav-selected','')}">
+                                    Darebin Living	
+                                </div>
+                                <div class="{!'nav-item '+ if(v.selectedNavigationIndex==3,' nav-selected','')}">
+                                    Building And Business	
+                                </div>
+                                <div class="{!'nav-item '+if(v.selectedNavigationIndex==4,' nav-selected','')}">
+                                    Your Council	
+                                </div>
+                                <div class="{!'nav-item '+if(v.selectedNavigationIndex==5,' nav-selected','')}">
+                                    Your  Say	
+                                </div>
+                                <div class="{!'nav-item '+if(v.selectedNavigationIndex==6,' nav-selected','')}" onclick="{!c.navigateToEnquiry}">
+                                    Enquiry	
+                                </div>
+                            </div>
+                            <div class="sign-in-nav slds-size--1-of-6">
+                                <div class="nav-item" onclick="{!c.navigateToLogin}">
+                                    Sign in	
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Top Over Component -->
+
+
+                <!--Top Over Component -->
+
+                <!--Live Agent Button -->
+                 <div class="body-container slds-size--1-of-1">
+                    <div class="livegaent-container">
+
+                        <c:COD_liveChat />
+
+
+                    </div>
+                    {!v.body}
+                </div> 
+                
+
+                <!--LiveAgent-->               
+                
+                <div class="footer-container ui-footer">
+                    <div class="slds-size--10-of-12 footer-nav slds-grid slds-wrap">
+                        <div class="footer-nav-item slds-size--3-of-12">
+                            <!--<h3>Contact Details</h3>
+                            1800 253 743<br/>
+                            103 Cawarra Road<br/>
+                            Caringbah NSW 2229<br/>
+                            enquiries@civic.org.au<br/>
+                            ABN: 16 000 744 141-->
+
+						<div class="ui-callout-segment">
+							<a href="/">
+								<div class="ui-secondary-logo">
+									<img src="http://www.darebin.vic.gov.au/assets/images/logo-footer.png" alt="City of Darebin"></img>
+						                <div class="strapline">
+											 <p>the place to live</p>
+										 </div>
+								</div>
+								</a>
+						        <div class="callout-content">
+									 <p>Darebin City Council acknowledges the Wurundjeri people as the traditional owners and custodians of this land and pays respect to their Elders past and present.</p>
+						        </div>
+
+								<div class="callout-image">
+									<img src="http://www.darebin.vic.gov.au/-/media/cityofdarebin/images/footer/aboriginalflag.ashx" alt="aboriginal-flag"></img>
+								</div>
+						        <div class="callout-image">
+									<img src="http://www.darebin.vic.gov.au/-/media/cityofdarebin/Images/Footer/TorresStraitIslandsFlag.ashx" alt="aboriginal-flag"></img>
+								</div>
+						</div>                            
+                        </div>
+                        <div class="footer-nav-item slds-size--3-of-12 list" style="width: 155px;">
+                        	<div class="item1-title clearfix">
+								<p>Talk to us</p>
+
+							</div>
+								<div class="list-content">
+							    	<p>Call 8470 8888 <br/>
+										Fax 8470 8877<br/>
+										Email&nbsp;<a href="mailto:mailbox@darebin.vic.gov.au">mailbox@</a><br/>
+										<a href="mailto:mailbox@darebin.vic.gov.au">darebin.vic.gov.au</a>
+									</p>
+									<p>274 Gower Street<br/>
+										Preston VIC 3072<br/>
+										<br/>
+										Mail PO Box 91<br/>
+										Preston VIC 3072
+									</p>
+									<p>
+									Online&nbsp;<a href="http://www.darebin.vic.gov.au/Global/ContactUs">Contact Us</a>
+									</p>
+								</div>
+                           	<!--<h3>Menu</h3>
+                            Services<br/>
+                            Industries<br/>
+                            News/Events<br/>
+                            About<br/>
+                            Shop<br/>-->
+
+
+                        </div>
+                        <div class="footer-nav-item slds-size--3-of-12 list" style="width: 230px;">
+                            <div class="item2-title">
+								<img id="ctl17" src="http://www.darebin.vic.gov.au/-/media/cityofdarebin/Images/Footer/speakyourlanguage.ashx" alt="speak-your-language"></img>
+								<p>Speak your language</p>
+							</div>  
+
+
+
+
+
+                        </div>
+                        <div class="footer-nav-item slds-size--3-of-12">
+                            <h3>Connect with us</h3>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</aura:component>

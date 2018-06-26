@@ -1,0 +1,103 @@
+<aura:component implements="forceCommunity:themeLayout" access="global" description="Sample Custom Theme Layout">
+    
+    <aura:attribute name="search" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="logo" type="Aura.Component[]" required="false" />
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="newHeader" type="Aura.Component[]" required="false"/>
+    
+    <aura:attribute name="selectedNavigationIndex" type="Integer" default="1"/>
+    
+    <aura:handler event="aura:waiting" action="{!c.waiting}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.doneWaiting}"/>
+    
+    <aura:handler action="{!c.doInit}" name="init" value="{!this}" />
+    
+    <div aura:id="LOADING_SPINNER" class="slds-hide">
+        <lightning:spinner variant="brand" size="large" alternativeText="loadingClaimForm"/>
+    </div>
+
+   
+    <div class="slds-grid slds-wrap">
+		<div class="mainContentArea"> 
+            <div class="slds-grid slds-wrap slds-size--1-of-1" >
+                <div class="nav-container">
+                    <div class="slds-small-size--6-of-8 slds-medium-size-6-of-8 slds-large-size--10-of-12">
+                        <div class="slds-grid slds-wrap">
+                            <div class="nav-items slds-size--5-of-6">
+                                <div class="{!'nav-item '+if(v.selectedNavigationIndex==1,' nav-selected','')}" onclick="{!c.navigateToHome}">
+                                    Services	
+                                </div>
+                                <div class="{!'nav-item '+ if(v.selectedNavigationIndex==2,' nav-selected','')}">
+                                    Industries	
+                                </div>
+                                <div class="{!'nav-item '+ if(v.selectedNavigationIndex==3,' nav-selected','')}">
+                                    News/Events	
+                                </div>
+                                <div class="{!'nav-item '+if(v.selectedNavigationIndex==4,' nav-selected','')}">
+                                    About	
+                                </div>
+                                <div class="{!'nav-item '+if(v.selectedNavigationIndex==5,' nav-selected','')}">
+                                    Shop	
+                                </div>
+                                <div class="{!'nav-item '+if(v.selectedNavigationIndex==6,' nav-selected','')}" onclick="{!c.navigateToEnquiry}">
+                                    Enquiry	
+                                </div>
+                                <div class="{!'nav-item '+if(v.selectedNavigationIndex==7,' nav-selected','')}" onclick="{!c.navigateToEnquiryPardot}">
+                                    Enquiry	(Pardot)
+                                </div>
+                            </div>
+                            <div class="sign-in-nav slds-size--1-of-6">
+                                <div class="nav-item" onclick="{!c.navigateToLogin}">
+                                    Sign in	
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-container slds-size--1-of-1">
+                    <div class="contact-container">
+                        <div>
+                    	<lightning:icon iconName="standard:call" class="contact-icon"  size="large"/>
+                            </div>
+                    	<div class="contact-text">
+                            <span>Contact</span>
+                        </div>
+                    </div>
+                	{!v.body}
+                </div>
+                
+                
+                <div class="footer-container">
+                    <div class="slds-size--10-of-12 footer-nav slds-grid slds-wrap">
+                        <div class="footer-nav-item slds-size--3-of-12">
+                            <h3>Contact Details</h3>
+                            xxxx xxx xxx<br/>
+                            122 Walker Street<br/>
+                            North Sdyney NSW 2060<br/>
+                            projects@tquilaanz.com<br/>
+                            ABN: 17 162 913 911
+                        </div >
+                        <div class="footer-nav-item slds-size--3-of-12">
+                           	<h3>Menu</h3>
+                            Services<br/>
+                            Industries<br/>
+                            News/Events<br/>
+                            About<br/>
+                            Shop<br/>
+                        </div >
+                        <div class="footer-nav-item slds-size--3-of-12">
+                            <h3>Tquila Matters Newsletter</h3>
+                        </div>
+                        <div class="footer-nav-item slds-size--3-of-12">
+                            <h3>Connect with us</h3>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <ltng:require scripts="{!$Resource.PardotTracking}" />
+</aura:component>

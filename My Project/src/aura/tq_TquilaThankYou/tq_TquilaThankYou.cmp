@@ -1,0 +1,26 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" >
+    <div class="thankyou-container">
+        <div class="slds-grid slds-wrap slds-small-size--6-of-8 slds-medium-size-6-of-8 slds-large-size--10-of-12">
+            <div class="slds-size--1-of-1">
+                <c:tq_TquilaNav />
+            </div>
+            
+            <div class="slds-size--1-of-1">
+                <div role="alertdialog" aria-labelledby="prompt-heading-id" aria-describedby="prompt-message-wrapper" >
+                    <div class="slds-modal__container">
+                        <div class="slds-modal__header slds-theme--success slds-theme--alert-texture header-text">
+                            <h2 class="slds-text-heading--medium" id="prompt-heading-id">Enquiry submitted successfully</h2>
+                        </div>
+                        <div class="slds-modal__content slds-p-around--medium">
+                            <p>Thank you for submitted your enquiry. Our team of experts will review and will get back to you shortly.</p>
+                        </div>
+                        <div class="slds-modal__footer slds-theme--default return-home">
+                            <button class="slds-button slds-button--neutral" onclick="{!c.navigateToHome}">Return to Home</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</aura:component>
